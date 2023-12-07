@@ -6,12 +6,12 @@ import Button from "@/components/Button";
 //ICONS
 import { Calendar, Clock } from "lucide-react";
 
-interface IEventCardProps{
-    time: string;
-    date: string;
-    name: string;
-    coverImage: string;
-    price: string;
+interface IEventCardProps {
+  time: string;
+  date: string;
+  name: string;
+  coverImage: string;
+  price: string;
 }
 
 const EventCard = () => {
@@ -57,7 +57,7 @@ const EventCard = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-end md:flex-col md:justify-between md:items-end gap-4 p-4 md:py-4 md:p-0">
+      <div className="flex items-center md:flex-col justify-between md:items-end gap-4 p-4 md:py-4 md:p-0">
         <p className={cn("text-3xl md:text-4xl", bungee.className)}>20$</p>
         <Button label="BUY TICKETS" font="bungee" />
       </div>
