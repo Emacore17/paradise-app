@@ -8,15 +8,15 @@ import { itIT } from "@clerk/localizations";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins"
 });
 
-const bungeeFont = Bungee({
+const bungee = Bungee({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-sans",
+  variable: "--font-bungee",
 });
 
-export const bungee = bungeeFont.className;
 
 export const metadata: Metadata = {
   title: "Paradise",
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <ClerkProvider localization={itIT}>
       <html lang="en">
-        <body className={poppins.className}>
+        <body className={`${poppins.variable} ${bungee.variable}`}>
           <Navbar />
           {children}
         </body>

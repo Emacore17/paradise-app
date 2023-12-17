@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { bungee } from "@/app/layout";
 import { cn } from "@/lib/utils";
 import { Calendar, Clock } from "lucide-react";
 import Link from "next/link";
@@ -66,7 +65,7 @@ const EventCard = ({ eventResponse, indice }: IEventCardProps) => {
         </div>
       </div>
       <div className="flex items-center md:flex-col justify-between md:items-end gap-4 p-4 md:py-4 md:p-0">
-        <p className={cn("text-3xl md:text-4xl", bungee.className)}>
+        <p className="text-3xl md:text-4xl font-bungee">
           {eventResponse.price}$
         </p>
         <Link href={`events/${eventResponse.id}`}>

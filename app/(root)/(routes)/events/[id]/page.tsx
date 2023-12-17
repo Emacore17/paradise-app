@@ -1,4 +1,3 @@
-import { bungee } from "@/app/layout";
 import AperitiveCard from "@/components/AperitiveCard";
 import EventInfoBadge from "@/components/EventInfoBadge";
 import TicketFormModal from "@/components/TicketFormModal";
@@ -114,17 +113,10 @@ const EventPage = async ({ params, searchParams }: IEventPageProps) => {
             <p className="font-semibold text-primary text-xl uppercase">
               price
             </p>
-            <p className={cn("font-bold text-6xl", bungee.className)}>
-              {data.price}$
-            </p>
+            <p className="font-bold text-6xl font-bungee">{data.price}$</p>
           </div>
           <Link href={`/events/${params.id}?ticketModal=true`}>
-            <button
-              className={cn(
-                "text-4xl px-6 py-2 bg-gradient-to-r from-primary to-rose-500 rounded-lg flex items-center gap-2 hover:to-primary hover:translate-y-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20",
-                bungee.className
-              )}
-            >
+            <button className="text-4xl px-6 py-2 bg-gradient-to-r from-primary to-rose-500 rounded-lg flex items-center gap-2 hover:to-primary hover:translate-y-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 font-bungee">
               BUY NOW <Ticket className="w-8 h-8" />
             </button>
           </Link>

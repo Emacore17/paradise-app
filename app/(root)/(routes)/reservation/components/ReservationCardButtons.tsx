@@ -1,5 +1,4 @@
 import { Loader2, Trash } from "lucide-react";
-import { useFetch } from "../hooks/useFetch";
 import { useRouter } from "next/navigation";
 import { useReservationStore } from "@/store/reservationStore";
 import { useAuth } from "@clerk/nextjs";

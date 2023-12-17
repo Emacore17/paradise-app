@@ -1,4 +1,3 @@
-import { bungee } from "@/app/layout";
 import EventCard from "@/components/EventCard";
 import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
@@ -16,30 +15,25 @@ const HomePage = async () => {
               <p className="text-primary text-xl xl:text-2xl font-bold text-center">
                 Our Events
               </p>
-              <h2
-                className={cn(
-                  "text-5xl xl:text-6xl text-center",
-                  bungee.className
-                )}
-              >
+              <h2 className="text-5xl xl:text-6xl text-center font-bungee">
                 UPCOMING EVENTS
               </h2>
             </div>
-              <div className="w-full flex flex-col gap-5">
-                {data &&
-                  data.map((item, index) => (
-                    <EventCard
-                      key={item.id}
-                      indice={index}
-                      eventResponse={item}
-                    ></EventCard>
-                  ))}
-                {error && (
-                  <p className="uppercase text-center font-semibold text-red-500">
-                    {error.message}
-                  </p>
-                )}
-              </div>
+            <div className="w-full flex flex-col gap-5">
+              {data &&
+                data.map((item, index) => (
+                  <EventCard
+                    key={item.id}
+                    indice={index}
+                    eventResponse={item}
+                  ></EventCard>
+                ))}
+              {error && (
+                <p className="uppercase text-center font-semibold text-red-500">
+                  {error.message}
+                </p>
+              )}
+            </div>
           </section>
         </div>
       </main>

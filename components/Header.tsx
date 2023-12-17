@@ -2,8 +2,6 @@ import Image from "next/image";
 import "./../app/gradient-background.css";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { bungee } from "@/app/layout";
 import { currentUser } from "@clerk/nextjs";
 
 const Header = async () => {
@@ -19,12 +17,7 @@ const Header = async () => {
       <div className="gradient absolute -z-10"></div>
       <div className="space-y-20">
         <div className="space-y-2 xl:space-y-4 flex flex-col justify-center items-center">
-          <p
-            className={cn(
-              "text-3xl md:text-5xl xl:text-7xl font-semibold tracking-wider",
-              bungee
-            )}
-          >
+          <p className="text-3xl md:text-5xl xl:text-7xl font-semibold tracking-wider font-bungee">
             WELCOME TO
           </p>
           <h1 className="text-5xl md:text-7xl xl:text-9xl text-transparent font-black font-outline-2 xl:font-outline-4">
@@ -34,30 +27,21 @@ const Header = async () => {
         <div className="flex flex-col md:flex-row md:items-start items-center justify-center gap-8 xl:gap-10">
           <Link
             href="#upcoming-events"
-            className={cn(
-              "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-primary bg-gradient-to-r from-primary to-rose-500 py-3 px-6 whitespace-nowrap flex items-center justify-center hover:to-primary transition-all duration-300",
-              bungee
-            )}
+            className="text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-primary bg-gradient-to-r from-primary to-rose-500 py-3 px-6 whitespace-nowrap flex items-center justify-center hover:to-primary transition-all duration-300 font-bungee"
           >
             EVENTS
           </Link>
           {user ? (
             <Link
               href="/reservation"
-              className={cn(
-                "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
-                bungee
-              )}
+              className="text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 font-bungee"
             >
               MY TICKETS
             </Link>
           ) : (
             <Link
               href="/sign-up"
-              className={cn(
-                "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
-                bungee
-              )}
+              className="text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 font-bungee"
             >
               SIGN UP
             </Link>

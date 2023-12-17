@@ -1,4 +1,3 @@
-import { bungee } from "@/app/layout";
 import { cn } from "@/lib/utils";
 
 type ButtonFont = "default" | "bungee";
@@ -25,7 +24,7 @@ const Button = ({
         type === "primary",
       "border-2 border-foreground hover:bg-foreground hover:text-black":
         type === "secondary",
-      [bungee.className]: font === "bungee",
+      "font-bungee": font === "bungee",
     },
     className
   );
