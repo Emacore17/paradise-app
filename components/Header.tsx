@@ -20,7 +20,7 @@ const Header = async () => {
           <p className="text-3xl md:text-5xl xl:text-7xl font-semibold tracking-wider font-bungee">
             WELCOME TO
           </p>
-          <h1 className="text-5xl md:text-7xl xl:text-9xl text-transparent font-black outline-title">
+          <h1 className="text-5xl md:text-7xl xl:text-9xl text-transparent font-black font-outline-2 xl:font-outline-4">
             P A R A D I S E
           </h1>
         </div>
