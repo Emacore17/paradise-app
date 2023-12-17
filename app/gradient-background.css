@@ -17,7 +17,7 @@
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(
       hsla(257, 69%, 20%, 0.85),
-      hsl(336, 83%, 46%)
+      hsl(336, 84%, 61%)
     );
   
     animation: rotate var(--speed) var(--easing) alternate infinite;

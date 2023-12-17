@@ -1,6 +1,5 @@
 import { bungee } from "@/app/layout";
 import { cn } from "@/lib/utils";
-import React from "react";
 
 type ButtonFont = "default" | "bungee";
 

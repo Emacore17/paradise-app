@@ -1,16 +1,13 @@
 import Image from "next/image";
-
-// Background CSS
 import "./../app/gradient-background.css";
-// ICONS
-import { MoveDown } from "lucide-react";
-
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import Button from "@/components/Button";
 import { cn } from "@/lib/utils";
 import { bungee } from "@/app/layout";
+import { currentUser } from "@clerk/nextjs";
 
-const Header = () => {
+const Header = async () => {
+  const user = await currentUser();
   return (
     <header className="min-h-[calc(100vh-6rem)] w-full flex flex-col justify-center items-center gap-14">
       <Image
@@ -34,22 +31,41 @@ const Header = () => {
             P A R A D I S E
           </h1>
         </div>
-        <div className="flex justify-center gap-4 xl:gap-10">
-          <Button
-            font="bungee"
-            label="EVENTS"
-            className="text-sm md:text-base md:w-44 w-40 xl:w-48 xl:text-lg"
-          />
-          <Button
-            font="bungee"
-            label="SIGN UP"
-            type="secondary"
-            className="text-sm md:text-base md:w-44 w-40 xl:w-48 xl:text-lg"
-          />
+        <div className="flex flex-col md:flex-row md:items-start items-center justify-center gap-8 xl:gap-10">
+          <Link
+            href="#upcoming-events"
+            className={cn(
+              "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-primary bg-gradient-to-r from-primary to-rose-500 py-3 px-6 whitespace-nowrap flex items-center justify-center hover:to-primary transition-all duration-300",
+              bungee.className
+            )}
+          >
+            EVENTS
+          </Link>
+          {user ? (
+            <Link
+              href="/reservation"
+              className={cn(
+                "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
+                bungee.className
+              )}
+            >
+              MY TICKETS
+            </Link>
+          ) : (
+            <Link
+              href="/sign-up"
+              className={cn(
+                "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
+                bungee.className
+              )}
+            >
+              SIGN UP
+            </Link>
+          )}
         </div>
       </div>
       <Link href="#upcoming-events">
-        <MoveDown className="animate-bounce md:w-8 md:h-8 xl:w-10 xl:h-10" />
+        <ChevronDown className="animate-bounce md:w-8 md:h-8 xl:w-10 xl:h-10" />
       </Link>
     </header>
   );

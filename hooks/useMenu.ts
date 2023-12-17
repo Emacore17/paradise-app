@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-export const useModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export const useMenu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (isModalOpen) {
+    if (isMenuOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
@@ -14,7 +14,7 @@ export const useModal = () => {
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
-  }, [isModalOpen]);
+  }, [isMenuOpen]);
 
-  return { isModalOpen, setIsModalOpen };
+  return { isMenuOpen, setIsMenuOpen };
 };
