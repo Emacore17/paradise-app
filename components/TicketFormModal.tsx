@@ -163,7 +163,7 @@ const TicketFormModal = ({
                 )}
               </div>
             </div>
-            <p className="font-black text-xl text-primary">SCEGLI UN ORARIO</p>
+            <p className="font-black text-xl text-primary">CHOOSE A TIME</p>
             <div className="flex flex-wrap gap-4">
               {timeSlots.map((time, index) => (
                 <button
@@ -190,8 +190,8 @@ const TicketFormModal = ({
           </div>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              <p className="text-lg font-semibold text-primary">PRICE:</p>
-              <p className="font-black text-3xl">{price}$</p>
+              <p className="text-lg font-black text-primary">PRICE:</p>
+              <p className="font-black text-3xl font-bungee">{price}$</p>
             </div>
             <TicketModalButtons isSubmitting={isSubmitting} responseError={responseError}/>
           </div>

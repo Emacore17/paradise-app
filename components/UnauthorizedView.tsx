@@ -7,7 +7,7 @@ const UnauthorizedView = () => {
       <div className="w-full h-1/2 space-y-8 overflow-y-auto rounded-lg bg-background p-6 md:p-10 xs:w-5/6 sm:w-2/3 md:w-2/3 lg:w-2/5 xl:w-1/3 flex flex-col items-center justify-center">
         <ShieldX className="w-20 h-20 text-red-500" />
         <p className="text-2xl font-bold text-center">
-          Registrati per prenotare un biglietto.
+          You need to sign up.
         </p>
         <button
           className="bg-white py-2 px-6 text-lg font-bold text-black rounded-lg hover:bg-primary hover:text-white transition-all duration-300"

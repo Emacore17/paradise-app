@@ -38,7 +38,7 @@ const EventPage = async ({ params, searchParams }: IEventPageProps) => {
           <div className="absolute w-full bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background sm:hidden"></div>
         </div>
       </div>
-      <div className="w-full sm:w-2/3 md:w-3/5 lg:w-2/3 xl:w-2/5 min-h-[calc(50vh-5rem)] mx-auto p-4 flex flex-col gap-14">
+      <div className="w-full sm:w-2/3 md:w-3/5 lg:w-2/3 xl:w-2/5 min-h-[calc(50vh-5rem)] mx-auto px-4 pb-20 flex flex-col gap-14">
         {/* TITLE */}
         <div>
           <h1 className="text-center text-2xl md:text-3xl xl:text-4xl font-bold uppercase">
@@ -102,16 +102,16 @@ const EventPage = async ({ params, searchParams }: IEventPageProps) => {
             </div>
           ) : (
             <div className="flex gap-2">
-              <p>Nessun apertitivo</p>
+              <p>No aperitive included.</p>
               <XCircle className="text-red-500" />
             </div>
           )}
         </div>
         {/* BUTTON PRICE  */}
-        <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row items-center justify-evenly">
-          <div>
-            <p className="font-semibold text-primary text-xl uppercase">
-              price
+        <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center gap-2">
+            <p className="font-black text-primary text-3xl uppercase">
+              price:
             </p>
             <p className="font-bold text-6xl font-bungee">{data.price}$</p>
           </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "z-10 w-full h-24 sticky top-0 transition-all duration-300",
+        "z-10 w-full h-24 sticky top-0 transition-all duration-300 font-bungee",
         isSticky ? "bg-primary  shadow-md" : "bg-transparent text-white",
         pathname != "/" && "bg-primary shadow-md"
       )}

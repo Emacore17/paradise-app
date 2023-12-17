@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import { itIT } from "@clerk/localizations";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <body className={`${poppins.variable} ${bungee.variable}`}>
           <Navbar />
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

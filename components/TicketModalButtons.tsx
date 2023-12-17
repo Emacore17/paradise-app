@@ -25,7 +25,7 @@ const TicketModalButtons = ({
     <button
       type="submit"
       disabled={isSubmitting}
-      className="py-2 px-6 bg-gradient-to-r from-primary to-rose-500 text-xl rounded-lg font-black hover:to-primary"
+      className="font-bungee py-2 px-6 bg-gradient-to-r from-primary to-rose-500 text-xl rounded-lg font-black hover:to-primary"
     >
       BUY
     </button>
