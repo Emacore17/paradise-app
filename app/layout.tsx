@@ -10,17 +10,20 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const bungee = Bungee({
+const bungeeFont = Bungee({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-sans",
 });
+
+export const bungee = bungeeFont.className;
 
 export const metadata: Metadata = {
   title: "Paradise",
   description: "Paradise disco app",
 };
 
-export function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;

@@ -22,7 +22,7 @@ const Header = async () => {
           <p
             className={cn(
               "text-3xl md:text-5xl xl:text-7xl font-semibold tracking-wider",
-              bungee.className
+              bungee
             )}
           >
             WELCOME TO
@@ -36,7 +36,7 @@ const Header = async () => {
             href="#upcoming-events"
             className={cn(
               "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-primary bg-gradient-to-r from-primary to-rose-500 py-3 px-6 whitespace-nowrap flex items-center justify-center hover:to-primary transition-all duration-300",
-              bungee.className
+              bungee
             )}
           >
             EVENTS
@@ -46,7 +46,7 @@ const Header = async () => {
               href="/reservation"
               className={cn(
                 "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
-                bungee.className
+                bungee
               )}
             >
               MY TICKETS
@@ -56,7 +56,7 @@ const Header = async () => {
               href="/sign-up"
               className={cn(
                 "text-sm md:text-base w-48 xl:text-lg rounded-lg border-2 border-white bg-transparent py-3 px-6 whitespace-nowrap flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300",
-                bungee.className
+                bungee
               )}
             >
               SIGN UP
