@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: "Paradise disco app",
 };
 
-export default function RootLayout({
+export function RootLayout({
   children,
 }: {
   children: React.ReactNode;
